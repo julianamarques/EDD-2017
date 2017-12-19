@@ -34,48 +34,43 @@ class Lista {
 			
 			void inserir(int valor) {
 				No *no = new No(valor);
-				
-				No *novo = no;
+
 				// ATRIBUI VALOR A LISTA
-				novo -> valor = valor;
+				no -> valor = valor;
         
    	   	   	   // CRIA A LISTA
    	   	   	   if(inicio == NULL) {
-      	  	  	  novo -> prox = NULL;
-      	  	  	  novo -> ant  = NULL;
+      	  	  	  no -> prox = NULL;
+      	  	  	  no -> ant  = NULL;
                 
-      	  	  	  inicio = novo;
-      	  	  	  fim = novo;
+      	  	  	  inicio = no;
+      	  	  	  fim = no;
                 
       	  	  	  return ;
    	   	   	   }
    	   	   	   
    	   	   	   //INSERE NO FINAL
-   	   	   	   fim -> prox = novo;
-   	   	   	   novo -> prox = NULL;
-   	   	   	   novo -> ant = fim;
-   	   	   	   fim = novo;
+   	   	   	   fim -> prox = no;
+   	   	   	   no -> prox = NULL;
+   	   	   	   no -> ant = fim;
+   	   	   	   fim = no;
    
    	   	   	   return ;
 			}
 					
-			void inserirMeio(int valor, int i) {
-				//No *no = new No(valor);
+			void inserirNoMeio(int valor, int i) {
+				No *no = new No(valor);
 				No *atual = inicio;
-				//No *ant = inicio;
 				
 				int indice = 0;
 				
 				// PERCORRE A LISTA E INSERE VALOR EM DETERMINADA POSIÇÃO
 				while(atual != NULL) {
-					//if(atual ->valor > valor) {
-					//	atual ->valor = valor;
-						
-					//	return atual;
-					//}
-					
 					if(indice == i) {
-						atual ->valor = valor;
+						no -> prox = atual; // PONTEIRO PRÓXIMO DO NÓ RECEBE ATUAL 
+						no -> ant = atual -> ant; // PONTEIRO ANTERIOR DO PRÓXIMO NÓ RECEBE PONTEIRO ANTERIOR DO NÓ ATUAL
+						atual -> ant -> prox = no; // PONTEIROS ATUAL, ANTERIOR E PRÓXIMO APONTAM PARA O PRÓXIMO NÓ
+						atual -> ant = no; // ATUAL PASSA PRA PRÓXIMA POSIÇÃAO E SEU PONTEIRO ANTERIOR APONTA PARA O NÓ
 						
 						return ;
 					}
@@ -103,11 +98,8 @@ int main() {
 	l.inserir(9);
 	l.inserir(45);
 	l.inserir(50);
-	l.inserirMeio(2,5); //(VALOR, POSIÇÃO)
-	//l.inserirMeio(5);
-	//l.inserirMeio(4);
-	//l.inserirMeio(10);
-	//l.inserirMeio(55);
+	l.inserirNoMeio(2,5); //(VALOR, POSIÇÃO)
+	l.inserirNoMeio(99,3);
 	l.mostrar();
 	return 0;
 }
