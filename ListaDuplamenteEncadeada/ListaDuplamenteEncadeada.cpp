@@ -30,7 +30,7 @@ class Lista {
 			void inserir(int valor) {
 				No *no = new No(valor);
 
-				// ATRIBUI VALOR A LISTA (NÓ APONTA PARA VALOR)
+				// ATRIBUI VALOR A LISTA
 				no -> valor = valor;
         
    	   	   	   // CRIA A LISTA
