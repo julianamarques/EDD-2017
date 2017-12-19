@@ -32,8 +32,7 @@ class Lista {
 			// ATRIBUI VALOR A LISTA
 			no -> valor = valor;
 			
-			// CRIA A LISTA
-			
+			// CRIA A LISTA		
 			if(inicio == NULL) {
 				no -> prox = NULL;
 				no -> ant  = NULL;
