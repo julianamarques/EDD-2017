@@ -71,7 +71,7 @@ class Lista {
 						return ;
 					}
 					
-					atual = atual -> prox; // ATUAL PASSA PARA O PRÓXIMO VALOR
+					atual = atual -> prox; // ATUAL PASSA PARA O PRÓXIMO NÓ
 					indice++;
 				}
 			}
