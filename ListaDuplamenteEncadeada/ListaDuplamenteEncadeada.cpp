@@ -26,12 +26,7 @@ class Lista {
 				inicio = NULL;
 				fim = NULL;
 			}
-			
-			Lista(int valor) {
-				inicio = new No(valor);
-				inicio = fim;
-			}	
-			
+				
 			void inserir(int valor) {
 				No *no = new No(valor);
 
