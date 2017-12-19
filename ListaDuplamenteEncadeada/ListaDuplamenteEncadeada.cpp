@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include <iostream>
-#include <string.h>
 
 using namespace std;
 
@@ -61,15 +59,14 @@ class Lista {
    	   	   	   return ;
 			}
 					
-			No *inserirMeio(int valor, int i) {
+			void inserirMeio(int valor, int i) {
 				//No *no = new No(valor);
 				No *atual = inicio;
-				No *ant = inicio;
+				//No *ant = inicio;
 				
 				int indice = 0;
-				// PERCORRE A LISTA E SE O VALOR DA POSIÇÃO FOR MAIOR QUE O VALOR INSERIDO
-				// O VALOR É INSERIDO APÓS ELE
-				// MAS ELE SOBRESCREVE A POSIÇÃO DO VALOR APÓS ELE 
+				
+				// PERCORRE A LISTA E INSERE VALOR EM DETERMINADA POSIÇÃO
 				while(atual != NULL) {
 					//if(atual ->valor > valor) {
 					//	atual ->valor = valor;
@@ -80,15 +77,12 @@ class Lista {
 					if(indice == i) {
 						atual ->valor = valor;
 						
-						return atual;
+						return ;
 					}
 					
 					atual = atual->prox;
 					indice++;
 				}
-				
-				return NULL;
-				
 			}
 			
 			void mostrar(){
@@ -109,7 +103,7 @@ int main() {
 	l.inserir(9);
 	l.inserir(45);
 	l.inserir(50);
-	l.inserirMeio(2,2); //(VALOR, POSIÇÃO)
+	l.inserirMeio(2,5); //(VALOR, POSIÇÃO)
 	//l.inserirMeio(5);
 	//l.inserirMeio(4);
 	//l.inserirMeio(10);
