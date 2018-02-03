@@ -9,47 +9,47 @@ class Queue: public queue<T> {
 		queue<T> fila;
 	
 	public:
-	T popQueue(){
-		T tmp = fila.front();
-		fila.pop();
+		T popQueue(){
+			T tmp = fila.front();
+			fila.pop();
 		
-		return tmp;
-	}
+			return tmp;
+		}
 	
-	void pushQueue(T el){
-		fila.push(el);
-	}
+		void pushQueue(T el){
+			fila.push(el);
+		}
 	
-	void popTodos(){
-		while(fila.empty() == false) {
-			fila.pop();
-		}
-    }
+		void popTodos(){
+			while(fila.empty() == false) {
+				fila.pop();
+			}
+    	}
     
-    void imprimirFila() {
-    	while(fila.empty() == false) {
-			cout << fila.front() << endl;
-			fila.pop();
+    	void imprimirFila() {
+    		while(fila.empty() == false) {
+				cout << fila.front() << endl;
+				fila.pop();
+			}
 		}
-	}
     
-    // MÉTODO AINDA NÃO FUNCIONA COMO ESPERADO
-    void simularPilha(){
-    	queue<T> filaAux;
+    	// MÉTODO AINDA NÃO FUNCIONA COMO ESPERADO
+    	void simularPilha(){
+    		queue<T> filaAux;
 		
-		cout << "PILHA SIMULADA:" << endl;
+			cout << "PILHA SIMULADA:" << endl;
 		
-		while(fila.empty() == false) {
-			filaAux.push(fila.front());
-			fila.pop();
-		}
+			while(fila.empty() == false) {
+				filaAux.push(fila.front());
+				fila.pop();
+			}
 			
-		while(filaAux.empty() == false) {
-			cout << filaAux.front() << endl;
-			filaAux.pop();
-		}
- 	}
-};
+			while(filaAux.empty() == false) {
+				cout << filaAux.front() << endl;
+				filaAux.pop();
+			}
+ 		}
+	};
 
 int main(){
 	Queue<int> q;
