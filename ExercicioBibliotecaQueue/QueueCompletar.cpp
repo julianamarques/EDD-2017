@@ -26,6 +26,14 @@ class Queue: public queue<T> {
 		}
     }
     
+    void imprimirFila() {
+    	while(fila.empty() == false) {
+			cout << fila.front() << endl;
+			fila.pop();
+		}
+	}
+    
+    // MÉTODO AINDA NÃO FUNCIONA COMO ESPERADO
     void simularPilha(){
     	queue<T> filaAux;
 		
@@ -33,13 +41,12 @@ class Queue: public queue<T> {
 		
 		while(fila.empty() == false) {
 			filaAux.push(fila.front());
-			fila.pop();	
+			fila.pop();
 		}
 			
 		while(filaAux.empty() == false) {
 			cout << filaAux.front() << endl;
 			filaAux.pop();
-			
 		}
  	}
 };
