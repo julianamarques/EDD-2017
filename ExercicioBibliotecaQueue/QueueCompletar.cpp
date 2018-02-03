@@ -1,5 +1,6 @@
 #include <queue>
 #include <iostream>
+
 using namespace std;
 
 template <class T>
@@ -9,8 +10,9 @@ class Queue: public queue<T> {
 	
 	public:
 	T popQueue(){
-		T tmp=fila.front();
+		T tmp = fila.front();
 		fila.pop();
+		
 		return tmp;
 	}
 	
@@ -27,16 +29,15 @@ class Queue: public queue<T> {
     void simularPilha(){
     	queue<T> filaAux;
 		
-		cout << "FILA SIMULADA:" << endl;
+		cout << "PILHA SIMULADA:" << endl;
 		
 		while(fila.empty() == false) {
-			fila.push(fila.top());
-			fila.pop();
-				
+			filaAux.push(fila.front());
+			fila.pop();	
 		}
 			
 		while(filaAux.empty() == false) {
-			cout << filaAux.top() << endl;
+			cout << filaAux.front() << endl;
 			filaAux.pop();
 			
 		}
@@ -53,7 +54,7 @@ int main(){
 	q.pushQueue(7);
 	q.pushQueue(8);
 	
-	p.simularPilha();
+	q.simularPilha();
 	
 	
 	return 0;
