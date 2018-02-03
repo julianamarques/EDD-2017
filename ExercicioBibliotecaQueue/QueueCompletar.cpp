@@ -63,6 +63,5 @@ int main(){
 	
 	q.simularPilha();
 	
-	
 	return 0;
 }
