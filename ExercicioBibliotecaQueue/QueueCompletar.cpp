@@ -49,7 +49,7 @@ class Queue: public queue<T> {
 				filaAux.pop();
 			}
  		}
-	};
+};
 
 int main(){
 	Queue<int> q;
