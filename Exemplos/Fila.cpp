@@ -60,10 +60,10 @@ class Fila{
 			return valor;
 		}
 	
-		void exibir(){
+		void exibir() {
 			No *atual = inicio;
 			
-			while(atual != NULL){
+			while(atual != NULL) {
 				cout << "End: " << &atual << " | Valor: " << atual -> valor << " | Prox: " << atual -> prox << endl;
 				atual = atual -> prox;
 			}

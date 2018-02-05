@@ -58,10 +58,10 @@ class Pilha {
 		}
 		
 		// FUNCIONA, MAS NÃO É ACONSELHÁVEL PARA PILHAS	
-		void exibir(){
+		void exibir() {
 			No *atual = topo;
 		
-			while(atual != NULL){
+			while(atual != NULL) {
 				cout << "End: " << &atual << " | Valor: " << atual -> valor << " | Prox: " << atual -> prox << endl;
 				atual = atual -> prox;
 			}
