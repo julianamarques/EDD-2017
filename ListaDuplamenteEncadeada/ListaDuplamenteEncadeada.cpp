@@ -19,7 +19,7 @@ class No {
 class Lista {
 	public:
 		No *inicio;
-		No * fim;
+		No *fim;
 		
 		Lista() {
 			inicio = NULL;
@@ -104,7 +104,7 @@ class Lista {
 			
 			cout << "Mediana: " << mediana << endl;
 			cout << "Tamanho: " << tamanho << endl;
-			cout << "" << endl;
+			cout << endl;
 		}
 		
 		void mostrar(){
@@ -127,7 +127,7 @@ int main() {
 	l.inserir(45);
 	l.inserir(50);
 	l.inserir(70);
-	//l.inserirNoMeio(2,5); //(VALOR, POSIÇÃO)
+	//l.inserirNoMeio(2,5); //(VALOR, POSIÃ‡ÃƒO)
 	//l.inserirNoMeio(99,3);
 	l.inserirNoMeio(88);
 	l.inserirNoMeio(90);
