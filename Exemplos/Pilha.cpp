@@ -57,6 +57,10 @@ class Pilha {
 			return popped;
 		}
 		
+		int retornarTopo() {
+			return topo -> valor;
+		}
+		
 		// FUNCIONA, MAS NÃO É ACONSELHÁVEL PARA PILHAS	
 		void exibir() {
 			No *atual = topo;
@@ -81,6 +85,8 @@ int main() {
 	cout << endl;
 	
 	p.exibir();
+	
+	cout<< p.retornarTopo() << endl;
 	
 	return 0;
 }

@@ -59,6 +59,10 @@ class Fila{
 			
 			return valor;
 		}
+		
+		int topo() {
+			return inicio -> valor;
+		}
 	
 		void exibir() {
 			No *atual = inicio;
@@ -84,4 +88,6 @@ int main() {
 	cout << endl;
 	
 	f.exibir();
+	
+	cout << f.topo() << endl;
 }
