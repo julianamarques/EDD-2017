@@ -50,7 +50,7 @@ class Fila{
 			No *temp;
 			int valor;
 			
-			if(estaVazia()){
+			if(!estaVazia()){
 				temp = inicio;
 				valor = inicio -> valor;
 				inicio = inicio -> prox;

@@ -47,7 +47,7 @@ class Pilha {
 			No *temp;
 			int popped;
 		
-			if(topo != NULL){
+			if(!estaVazia()){
 				temp = topo;
 				popped = temp -> valor;
 				topo = topo -> prox;
@@ -57,7 +57,7 @@ class Pilha {
 			return popped;
 		}
 		
-		// NÃO ACONSELHÁVEL PARA PILHAS	
+		// FUNCIONA, MAS NÃO É ACONSELHÁVEL PARA PILHAS	
 		void exibir(){
 			No *atual = topo;
 		
