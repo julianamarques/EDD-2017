@@ -83,7 +83,6 @@ int main() {
 	p.pop();
 	
 	cout << endl;
-	
 	p.exibir();
 	
 	cout<< p.retornarTopo() << endl;
