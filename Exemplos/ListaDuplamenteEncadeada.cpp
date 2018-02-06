@@ -1,4 +1,5 @@
-// ATIVIDADE EM GRUPO: QUEST√ÉO 16 DO LIVRO DE EDD
+// ATIVIDADE EM GRUPO: QUEST√O 16 DO LIVRO DE EDD
+// GRUPO: JULIANA, PAULO ROBERTO, BRUNO DARSHAN, MARCOS, DIEGO, LEONARDO TORRES
 
 #include <iostream>
 
@@ -28,15 +29,30 @@ class Lista {
 			fim = NULL;
 		}
 		
+		bool estaVazia() {
+			return (inicio == NULL);
+		}
+		
+		bool estaNaLista(int v) {
+			No *atual = inicio;
+			
+			while(atual != NULL) {
+				if(atual -> valor == v) {
+					return true;
+				}
+				
+				atual = atual -> prox;
+			}
+			
+			return false;
+		}
+		
 		void inserir(int valor) {
 			No *no = new No(valor);
 			
 			no -> valor = valor;
 				
-			if(inicio == NULL) {
-				no -> prox = NULL;
-				no -> ant  = NULL;
-				
+			if(estaVazia()) {
 				inicio = no;
 				fim = no;
 				
@@ -45,7 +61,6 @@ class Lista {
 			}
 			
 			fim -> prox = no;
-			no -> prox = NULL;
 			no -> ant = fim;
 			fim = no;
 			
@@ -111,7 +126,7 @@ class Lista {
 			No *atual = inicio;
 			
 			while(atual != NULL){
-				cout << "\nValor: " << atual -> valor << endl;
+				cout << endl << "Valor: " << atual -> valor << endl;
 				atual = atual -> prox;
 			}
 		}
@@ -127,12 +142,20 @@ int main() {
 	l.inserir(45);
 	l.inserir(50);
 	l.inserir(70);
-	//l.inserirNoMeio(2,5); //(VALOR, POSI√á√ÉO)
+	//l.inserirNoMeio(2,5); //(VALOR, POSI«√O)
 	//l.inserirNoMeio(99,3);
 	l.inserirNoMeio(88);
 	l.inserirNoMeio(90);
 	
 	l.mostrar();
+	
+	if(l.estaNaLista(2)) {
+		cout << endl << "Elemento esta na lista" << endl;
+	}
+	
+	else {
+		cout << endl << "Elemento nao esta na lista" << endl;
+	}
 	
 	return 0;
 }

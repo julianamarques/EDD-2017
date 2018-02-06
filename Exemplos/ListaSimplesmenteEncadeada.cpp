@@ -23,6 +23,24 @@ class Lista {
 			fim = NULL;
 		}
 		
+		bool estaVazia() {
+			return (inicio == NULL);
+		}
+		
+		bool estaNaLista(int v) {
+			No *atual = inicio;
+			
+			while(atual != NULL) {
+				if(atual -> valor == v) {
+					return true;
+				}
+				
+				atual = atual -> prox;
+			}
+			
+			return false;
+		}
+		
 		void inserir(int valor) {
 			No *no = new No(valor);
 			
@@ -64,6 +82,14 @@ int main() {
 	l.inserir(70);
 	
 	l.mostrar();
+	
+	if(l.estaNaLista(7)) {
+		cout << endl << "Elemento esta na lista" << endl;
+	}
+	
+	else {
+		cout << endl << "Elemento nao esta na lista" << endl;
+	}
 	
 	return 0;
 }
