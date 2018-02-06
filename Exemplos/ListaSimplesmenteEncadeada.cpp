@@ -46,7 +46,7 @@ class Lista {
 			
 			no -> valor = valor;
 				
-			if(inicio == NULL) {
+			if(estaVazia()) {
 				inicio = no;
 				fim = no;
 				
