@@ -29,7 +29,6 @@ class Lista {
 			no -> valor = valor;
 				
 			if(inicio == NULL) {
-				no -> prox = NULL;
 				inicio = no;
 				fim = no;
 				
@@ -38,7 +37,6 @@ class Lista {
 			}
 			
 			fim -> prox = no;
-			no -> prox = NULL;
 			fim = no;
 			
 			return ;
