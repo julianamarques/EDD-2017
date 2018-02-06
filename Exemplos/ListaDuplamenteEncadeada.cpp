@@ -1,3 +1,5 @@
+// ATIVIDADE EM GRUPO: QUESTÃO 16 DO LIVRO DE EDD
+
 #include <iostream>
 
 using namespace std;
