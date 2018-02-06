@@ -52,6 +52,7 @@ class Lista {
 			return ;
 	   }
 	   
+	   // INSERIR NO MEIO, COM BASE EM UMA POSIÇÃO PASSADA COMO PARAMETRO
 	   void inserirNoMeio(int valor, int i) {
 	   	    No *no = new No(valor);
 			No *atual = inicio;
@@ -73,6 +74,7 @@ class Lista {
 			}
 	    }
 		
+		// INSERIR NO MEIO COM BASE NA MEDIANA
 		void inserirNoMeio(int valor) {
 			No *no = new No(valor);
 			No *atual = inicio;
@@ -103,10 +105,6 @@ class Lista {
 				atual = atual -> prox;
 				indice++;
 			}
-			
-			cout << "Mediana: " << mediana << endl;
-			cout << "Tamanho: " << tamanho << endl;
-			cout << endl;
 		}
 		
 		void mostrar(){
